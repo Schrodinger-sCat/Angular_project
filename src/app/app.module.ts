@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NewComponentComponent } from './new-component/new-component.component';
 import {NewModuleModule} from "./new-module/new-module.module";
 import {NewServiceService} from "./new-service.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {NewServiceService} from "./new-service.service";
   ],
   imports: [
     BrowserModule,
-    NewModuleModule
+    NewModuleModule,
+    HttpClientModule,
   ],
   providers: [NewServiceService],
   bootstrap: [AppComponent]
