@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { NewComponentComponent } from './new-component/new-component.component';
+import {NewModuleModule} from "./new-module/new-module.module";
+import {NewServiceService} from "./new-service.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NewModuleModule
   ],
-  providers: [],
+  providers: [NewServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
