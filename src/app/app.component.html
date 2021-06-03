@@ -328,6 +328,12 @@
 </div>
 
 <div class="content" role="main">
+  <div *ngIf="response">
+    <p>Username: {{response.userName}}</p>
+    <p>Email: {{response.email}}</p>
+    <p>Role: {{response.role}}</p>
+    <p>Password: {{response.password}}</p>
+  </div>
   <app-new-component [user]="user"></app-new-component>
   <app-component2></app-component2>
 
